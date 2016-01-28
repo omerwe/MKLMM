@@ -14,6 +14,7 @@ MKLMM is designed to work in Python 2.7, and depends on the following freely ava
 * [Numpy](http://www.numpy.org/) and [Scipy](http://www.scipy.org/)
 * [Scikits-learn](http://scikit-learn.org/stable/)
 * [PySnpTools](https://github.com/MicrosoftGenomics/PySnpTools)
+
 Typically, the packages can be installed with the command "pip install --user <package_name>".
 
 MKLMM is particularly easy to use with the [Anaconda Python distribution](https://store.continuum.io/cshop/anaconda). The [numerically optimized version](http://docs.continuum.io/mkl-optimizations/index) of Anaconda can speed LEAP up by several orders of magnitude.
