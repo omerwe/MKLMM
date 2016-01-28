@@ -61,7 +61,7 @@ To rank regions, one should type:
 ```
 python rank_regions.py --bfile_train <bfile> --pheno_train <phenotype file> --meanLen <mean region length> --out <output file> --covar_train <covariates file>
 ```
-The bfile_train and phenotype files should contain only train set individuals, to prevent leakage. The covar_train flag is optional, and can be used to specify covariates wich will be modeled with fixed effects, in Plink format. Note that MKLMM automatically creates a covariate that is a column of ones, so there is no need to add it manually.
+The bfile_train and phenotype files should contain only train set individuals, to prevent leakage. The covar_train flag is optional, and can be used to specify covariates wich will be modeled with fixed effects, in Plink format. Note that MKLMM automatically creates a covariate that is an intercept covariate, so there is no need to add a column of ones.
 
 It is also possible to specify a bfile with test individuals (using the flag --bfile). This is useful for removal of top principal components from the genotypes, which can prevent confounding due to population structure (see details below). For an effective removal, it is required to compute the principal components using both the train and test individuals. This does not present any form of leakage, because the phenotypes of the test individuals are not known at any stage.
 Ranking of regions is typically very fast, owing to the fast LMM inference algorithm of the FastLMM method.
@@ -123,7 +123,7 @@ Standardization of genotypes can be carried in several ways. The standard way is
 -----------------------------
 Example data set
 -----------------------------
-The package contains a small example dataset in the "example" directory. These are synthetic genotypes and phenotypes, based on the real allele frequencies of chromosome 1 of 2,801 individuals from the WTCCC2 national blood service cohort. The example contains two regions with interacting SNPs, as well as a polygenic term spanning all SNPs.
+The package contains a small example dataset in the "example" directory with synthetic genotypes and phenotypes. The example contains two regions with interacting SNPs, as well as a polygenic term spanning all SNPs.
 The data is divided into a train set (containing 1,500 individuals) and a test set (containing 1,301 individuals).
 The example directory also contains the original (synthetic) phenotypes of all individuals, in the file pheno_all.phe, which can be used to evaluate prediction performance.
 
