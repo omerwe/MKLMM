@@ -1,7 +1,11 @@
 # MKLMM
 Multi Kernel Linear Mixed Models for Complex Phenotype Prediction
 
-MKLMM is a Python package for predition of complex phenotypes from single nucleotide polymorphism (SNP) data that can model genetic interactions by using multi-kernel-learning techniques.
+MKLMM is a Python package for predition of complex phenotypes from single nucleotide polymorphism (SNP) data that can model genetic interactions by using multi-kernel-learning techniques. The model is a generalization of [Adaptive MultiBLUP](http://genome.cshlp.org/content/early/2014/06/24/gr.169375.113.abstract), which divides the genome into several regions and infers a different variance component for every region. MKLMM improves upon MultiBLUP by additionally modeling genetic interactions, which are modeled by non-linear variance components (or kernels), where all model parameters are inferred jointly via restricted maximum likelihood.
+
+MKLMM is particularly suitable for modeling complex local interactions between nearby variants. MKLMM-Adapt is a variant of MKLMM which automatically infers interaction patterns across multiple genomic regions. 
+
+Several parts of the code are based on code translated from the [GPML toolbox](http://www.gaussianprocess.org/gpml/code/matlab/) and [Fast-LMM](https://github.com/MicrosoftGenomics/FaST-LMM).
 
 ------------------
 Installation
