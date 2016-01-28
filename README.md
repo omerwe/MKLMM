@@ -41,7 +41,7 @@ There are two files that need to be executed:
 
 The list of available options for both files can be seen by typing
 ```
-python <file_name> --help"
+python <file_name> --help
 ```
 
 For an example, please run:
