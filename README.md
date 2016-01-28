@@ -48,7 +48,7 @@ For an example, please run:
 ```
 python mklmm_wrapper.py --bfile_train example/train --pheno example/train.phe --bfile example/test --regions example/regions.txt --numRegions 2 --kernel lin --out example/predictions.txt
 ```
-This will train a model on the individuals in the file example/train.bed, will perform prediction on individuals in the file example/test.bed and will write the output to the file example/predictions.txt.
+This will train a model on the individuals in the file example/train.bed, will perform prediction on individuals in the file example/test.bed and will write the output to the file example/predictions.txt. The model will use two regions: One genome-wide region spanning all SNPs, and an additional region that obtained the highest log-likelihood in regions-ranking stage.
 
 ------------------
 Detailed Instructions
