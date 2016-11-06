@@ -17,7 +17,7 @@ MKLMM is designed to work in Python 2.7, and depends on the following freely ava
 
 Typically, the packages can be installed with the command "pip install --user <package_name>".
 
-MKLMM is particularly easy to use with the [Anaconda Python distribution](https://store.continuum.io/cshop/anaconda). The [numerically optimized version](http://docs.continuum.io/mkl-optimizations/index) of Anaconda can speed LEAP up by several orders of magnitude.
+MKLMM is particularly easy to use with the [Anaconda Python distribution](https://store.continuum.io/cshop/anaconda). The [numerically optimized version](http://docs.continuum.io/mkl-optimizations/index) of Anaconda can speed MKLMM up significantly.
 Alternatively (if numerically optimized Anaconda can't be installed), for very fast performance it is recommended to have an optimized version of Numpy/Scipy [installed on your system](http://www.scipy.org/scipylib/building), using optimized numerical libraries such as [OpenBLAS](http://www.openblas.net) or [Intel MKL](https://software.intel.com/en-us/intel-mkl) (see [Compilation instructions for scipy with Intel MKL)](https://software.intel.com/en-us/articles/numpyscipy-with-intel-mkl).
 
 Once all the prerequisite packages are installed, MKLMM can be installed on a git-enabled machine by typing:
