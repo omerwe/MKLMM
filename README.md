@@ -56,7 +56,7 @@ This will train a model on the individuals in the file example/train.bed, will p
 ------------------
 Detailed Instructions
 ------------------
-####Ranking of regions
+#### Ranking of regions
 To rank regions, one should type:
 ```
 python rank_regions.py --bfile_train <bfile> --pheno_train <phenotype file> --meanLen <mean region length> --out <output file> --covar_train <covariates file>
@@ -69,7 +69,7 @@ Ranking of regions is typically very fast, owing to the fast LMM inference algor
 
 The output file contains a row for every region, where each row has three entries. These entries correspond to the first and last SNP in the region (where the first SNP is numbered as 0), and to the log likeliood of the phenotype when using an LMM whose covariance matrix consists of only the SNPs in that region.
 
-####Training an MKLMM model
+#### Training an MKLMM model
 To train a model, one should type:
 ```
 python mklmm_wrapper.py --bfile_train <bfile> --pheno_train <phenotype file> --covar_train <covariates file> --regions <regions file> --numRegions <#regions to use> --train_out <output training file> --kernel <kernel type> 
@@ -88,7 +88,7 @@ The --kernel flag specifies the type of kernel that will be used, among several 
 All kernels can be augmented with a linear kernel, by adding the suffix "_lin". For example, rbf_lin specifies that for every region the model will use a weighted combination of a linear and an RBF kernel. Note that the polynomial kernels become homogeneous when used along with a linear kernel, because otherwise the model is overparameterized. Also note that the code supports several other kernel types not reported in the paper, such as the Matern, Gabor and piecewise polynomial kernel. Please look at the source code for the full
 list of kernels.
 
-####Performing Prediction:
+#### Performing Prediction:
 To perform prediction, one should type:
 ```
 python mklmm_wrapper.py --bfile_train <bfile> --pheno_train <phenotype file> --covar_train <covariates file> --regions <regions file> --numRegions <#regions to use> --train_file <training file> --kernel <kernel type> --bfile <bfile with new individuals> --out <output file>
