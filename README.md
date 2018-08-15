@@ -134,7 +134,7 @@ The example directory also contains the original (synthetic) phenotypes of all i
 -----------------
 Contact
 ---------
-For questions and comments, please contact Omer Weissbrod at omerw[at]cs.technion.ac.il
+For questions and comments, please contact Omer Weissbrod at oweissbrod[at]hsph.harvard.edu
 
 
 
